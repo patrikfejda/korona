@@ -8,3 +8,8 @@ The chart shows number of:
 - Total Deaths
 
 The apps runs on image [`patrikfejda/corona-data-graph-maker`](https://hub.docker.com/repository/docker/patrikfejda/corona-data-graph-maker) which is built from [this repository.](https://github.com/patrikfejda/korona)
+
+
+
+---
+If you find a bug or have any improvement suggestions feel free to submit an [Issue](https://github.com/patrikfejda/korona/issues) or a [pull request](https://github.com/patrikfejda/korona/pulls).
