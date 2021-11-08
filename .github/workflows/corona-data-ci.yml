@@ -16,7 +16,7 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M')"
     - name: Clone repository
-      run: git clone https://${{ secrets.TOKEN }}@github.com/patrikfejda/test.git
+      run: git clone https://${{ secrets.TOKEN }}@github.com/patrikfejda/korona.git
     - name: Create new graph and copy index.html
       run: cd korona ; docker run --name my-container patrikfejda/corona-data-graph-maker:latest python graf.py ; docker cp my-container:usr/app/src/index.html ./index.html 
     - name: Commit new index.html
