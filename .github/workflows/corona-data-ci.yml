@@ -1,0 +1,24 @@
+name: Create and push updated graph
+
+on:
+  schedule:
+    - cron:  '10 9 * * *' # 10:10 GMT+1
+    - cron:  '30 9 * * *' # 10:30 GMT+1
+    - cron:  '30 12 * * *' # 13:30 GMT+1
+    - cron:  '30 18 * * *' # 18:30 GMT+1
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get current date and time
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M')"
+    - name: Clone repository
+      run: git clone https://${{ secrets.TOKEN }}@github.com/patrikfejda/test.git
+    - name: Create new graph and copy index.html
+      run: cd korona ; docker run --name my-container patrikfejda/corona-data-graph-maker:latest python graf.py ; docker cp my-container:usr/app/src/index.html ./index.html 
+    - name: Commit new index.html
+      run: cd korona ; ls -la ; git config --global user.email "patrikfejda@gmail.com" ; git config --global user.name "patrikfejda" ; git add . ; git commit -m "${{ steps.date.outputs.date }} ADD NEW GRAPH" ; git push
+      
