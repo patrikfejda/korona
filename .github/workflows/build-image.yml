@@ -5,8 +5,8 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - !index.html
+    paths-ignore:
+      - '**/index.html'
 
 jobs:
   build_and_publish:
