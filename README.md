@@ -1,9 +1,9 @@
 # [Korona chart](https://patrikfejda.github.io/korona/)
 
-This app takes data from [Slovak Institute for Healthcare Analyses](https://github.com/Institut-Zdravotnych-Analyz/covid19-data) and generates a simple chart using [plotly](https://plotly.com/).
+This app extracts data from [Slovak Institute for Healthcare Analyses](https://github.com/Institut-Zdravotnych-Analyz/covid19-data) and generates a simple chart using [plotly](https://plotly.com/) and publishes the chart [patrikfejda.github.io/korona](https://patrikfejda.github.io/korona/)
 
 The chart shows number of:
-- Daily PCR tests 
+- Daily PCR tests
 - Daily New Cases (PCR)
 - Total Deaths
 
@@ -12,4 +12,4 @@ The apps runs on image [`patrikfejda/corona-data-graph-maker`](https://hub.docke
 
 
 ---
-If you find a bug or have any improvement suggestions feel free to submit an [Issue](https://github.com/patrikfejda/korona/issues) or a [pull request](https://github.com/patrikfejda/korona/pulls).
+If you find a bug or have any suggestions feel free to submit an [Issue](https://github.com/patrikfejda/korona/issues) or a [pull request](https://github.com/patrikfejda/korona/pulls).
