@@ -2,7 +2,7 @@ name: Create and push updated graph
 
 on:
   schedule:
-    - cron:  '30 10 * * *' # 11:30 GMT+1
+    - cron:  '30 10 * * 0' # 11:30 GMT+1 on Sunday
 
 jobs:
   build-and-commit:
